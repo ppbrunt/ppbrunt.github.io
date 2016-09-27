@@ -10,6 +10,13 @@
 
     <!--Description-->
     
+        <meta name="description" content="经过一个下午的折腾，我还是终于把自己的一个静态页面博客搭起来了，走了好多弯路~自学成才的路是坎坷的~如果不记录下来，我一个下午的折腾过几天估计就忘了，进入正题！
+工具及环境准备工作
+Mac OSX EI Capitan 电脑
+atom  文本编辑器，或任意一款文本编辑器
+github 账号
+git ">
+    
 
     <!--Author-->
     
@@ -18,7 +25,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="简易搭建Hexo博客"/>
+        <meta property="og:title" content="免费简易搭建Hexo博客网站"/>
     
 
     <!--Open Graph Description-->
@@ -40,7 +47,7 @@
 
     <!-- Title -->
     
-    <title>简易搭建Hexo博客 - </title>
+    <title>免费简易搭建Hexo博客网站 - </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -131,7 +138,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>简易搭建Hexo博客</h1>
+                    <h1>免费简易搭建Hexo博客网站</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
@@ -171,7 +178,59 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                
+                <p>经过一个下午的折腾，我还是终于把自己的一个静态页面博客搭起来了，走了好多弯路~自学成才的路是坎坷的~如果不记录下来，我一个下午的折腾过几天估计就忘了，进入正题！</p>
+<h3 id="工具及环境准备工作"><a href="#工具及环境准备工作" class="headerlink" title="工具及环境准备工作"></a>工具及环境准备工作</h3><ul>
+<li>Mac OSX EI Capitan 电脑</li>
+<li><a href="url">atom</a> <img src="http://oe53rmton.bkt.clouddn.com/atom.png?imageView/2/w/50" alt="AA"> 文本编辑器，或任意一款文本编辑器</li>
+<li><a href="https://github.com/" target="_blank" rel="external">github</a> 账号</li>
+<li><a href="https://git-scm.com/" target="_blank" rel="external">git</a> 软件，Mac用户自带有</li>
+<li><a href="https://hexo.io/zh-cn/docs/setup.html" target="_blank" rel="external">hexo</a>模块，查看官方文档</li>
+</ul>
+<p>首先要做的就是进入<a href="https://hexo.io/zh-cn/docs/setup.html" target="_blank" rel="external">hexo</a>文档了解Hexo到底是什么东西</p>
+<pre><code>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
+</code></pre><h3 id="一、安装hexo"><a href="#一、安装hexo" class="headerlink" title="一、安装hexo"></a>一、安装<a href="https://hexo.io/zh-cn/docs/setup.html" target="_blank" rel="external">hexo</a></h3><p>安装需要两个环境</p>
+<ul>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
+<li><a href="https://git-scm.com/" target="_blank" rel="external">Git</a></li>
+</ul>
+<p>因为Mac自带有git，我就不介绍git的安装了</p>
+<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>安装 Node.js 的最佳方式是使用 nvm。</p>
+<p>cURL:</p>
+<pre><code>$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+</code></pre><p>Wget:</p>
+<pre><code>$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
+</code></pre><p>安装完成后，重启终端并执行下列命令即可安装 Node.js。</p>
+<pre><code>$ nvm install stable
+</code></pre><p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</p>
+<pre><code>$ npm install -g hexo-cli
+</code></pre><h3 id="二、建立网站"><a href="#二、建立网站" class="headerlink" title="二、建立网站"></a>二、建立网站</h3><p>安装完成Hexo后，选择一个文件夹作为建立网站的存放的路径比如我选择的是桌面Blog文件夹</p>
+<pre><code>$ cd desktop/blog
+</code></pre><p>初始化网站</p>
+<pre><code>$ hexo init
+</code></pre><p>执行下面的命令，系统会可以根据package.json文件中dependencies的配置安装所有依赖包</p>
+<pre><code>$ npm install
+</code></pre><p>命令不熟悉的，一定要去查官方文档，这句话不管是什么样的程序员都管用！文档就是教程，传送在上面</p>
+<p>新建完成之后，根目录文件夹下各个目录的含义，可以参考Hexo官网的解释：<a href="https://hexo.io/zh-cn/docs/setup.html" target="_blank" rel="external">目录信息</a></p>
+<h3 id="三、启动网站"><a href="#三、启动网站" class="headerlink" title="三、启动网站"></a>三、启动网站</h3><p>在建立网站的目录下使用以下命令，之后访问自己的host  <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>可以看到一个默认的博客模板,Hello，world博文</p>
+<pre><code>$ hexo server
+</code></pre><p>每次我们写完博客后，先到本地预览，然后部署到github.page上，这样会方便很多</p>
+<h3 id="四、配置部署"><a href="#四、配置部署" class="headerlink" title="四、配置部署"></a>四、配置部署</h3><p>首先申请<a href="https://github.com" target="_blank" rel="external">github</a>账号，然后建立仓库 ，如下图<img src="http://oe53rmton.bkt.clouddn.com/addRepo.png?imageView/2/w/500" alt="2"></p>
+<p>填写产库名字<img src="http://oe53rmton.bkt.clouddn.com/name.png?imageView/2/w/500" alt="3">仓库名字必须是yourname.github.io 这个格式(不确定，反正不是这个名字我试了几次不行，没找到原因 = 。=)，yourname 是需要你自己起的名字，打开仓库复制Https<img src="http://oe53rmton.bkt.clouddn.com/copyUrl.png?imageView/2/w/500" alt="4"></p>
+<p>用ATOM打开hexo安装博客模块下的<code>_config.yml</code> 文件,搜索deploy，修改成如下</p>
+<pre><code># Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repository: https://github.com/yourname/yourname.github.io.git
+  branch: master
+</code></pre><p> <code>repository:</code>参数后面就是你复制自己仓库https连接</p>
+<p> <code>:</code>后面一定要空格。</p>
+<p> 安装Git包，执行以下命令</p>
+<pre><code>$ npm install hexo-deployer-git --save
+</code></pre><p> 部署</p>
+<pre><code>$ hexo d
+</code></pre><p>现在可以通过访问 <a href="https://yourname.github.io/" target="_blank" rel="external">https://yourname.github.io/</a> 访问自己的博客啦。如果不知道自己的博客连接，进入github自己的仓库，点击右上角Setting 拖到下面 github page，里面有个你自己的博客地址。</p>
+
 
                 
                     <!-- Go to www.addthis.com/dashboard to customize your tools -->
